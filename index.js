@@ -43,6 +43,8 @@ function KareninAlani(kenaruzunlugu) {
 }
 
 /* (Oto test yok) Yukarıdaki KareninAlani fonksiyonunu kenar uzunluğu = 10 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
+const kenaruzunlugu = 10;
+console.log(KareninAlani(kenaruzunlugu));
 
 /* GÖREV 1:  
 - CemberinCevresi fonksiyonunu kullanarak aşağıdaki yönergeleri uygulayın:
@@ -52,11 +54,15 @@ function KareninAlani(kenaruzunlugu) {
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
-}
+function CemberinCevresi(yariCapi) {
+const cevre = 2*pi*yariCapi;
+return cevre;
+};
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
+
+const yariCapi=5;
+console.log(CemberinCevresi(yariCapi));
 
 /* 	GÖREV 2:  
 - CemberinAlani fonksiyonunu kullanarak aşağıdaki yönergeleri uygulayın:
@@ -66,11 +72,14 @@ function CemberinCevresi(/* kodlar buraya */) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
-}
+function CemberinAlani(yariCapi,pi) {
+ const alan  = (pi* Math.pow(yariCapi,2));
+ return alan;
+};
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
+const yariCapi = 15;
+console.log(CemberinAlani(yariCapi,pi));
 
 /* 	GÖREV 3:
 	- Sayfanın en üstünde global değişken olarak tanımlanmış bir sayilar dizisi bulunmaktadır. Bu dizi içinde 0 ile 1000 arasında rasgele oluşturulmuş tam sayılar ve ondalıklı sayılar bulunmaktadır. Bu diziyi kullanarak aşağıdakileri uygulayın:
@@ -99,30 +108,57 @@ let ucetambolunenler,
   siralisayilar,
   tekraredensayilar;
 
-// 3a çözümü
+// 3a çözümü:
+let enkucuk = sa[0];
+let enbuyuk = sa[0];
+    for(let i=0; i<sa.length ; i++){
+            if(enbuyuk < sa[i]){
+               enbuyuk = sa[i]; 
+            }else if(enkucuk > sa[i]){
+               enkucuk = sa[i]; 
 
-/* kodlar buraya */
+     }
+
+}
 
 // 3b çözümü:
+sayilar.forEach(function(sayi) {
+  if (sayi % 3 === 0) {
+    ucetambolunenler.push(sayi);
+  }
+}
 
-/* kodlar buraya */
 
 // 3c çözümü:
 
 /* kodlar buraya */
 
 // 3d çözümü
+//`besyuzdenkucuksayilar` adında bir dizi oluşturarak, sayilar dizisinin içindeki 500'den küçük sayıları bu diziye atayın (.filter metodunu kullanın)
+const = besyuzdenkucuksayilar;
+sayilar.filter(besyuzdenkucuksayilar);
 
-/* kodlar buraya */
 
 // 3e çözümü
-
-/* kodlar buraya */
+sayilar.sort(function(a, b){return a-b});
 
 // 3f çözümü
+/* `tekraredensayilar` adında bir dizi oluşturun. 
+sayilar dizisi içerisindeki bazı sayılar birden fazla kere yazılmış. 
+sayilar dizisi içerisinde birden fazla kez yazılmış sayıları tespit 
+ederek kaç kere tekrar edildiğini belirten bir string oluşturulup `tekraredensayilar` 
+dizisine aktarılmasını istiyoruz. Örnek string: "{sayı} sayısı {tekrarSayisi} kere tekrar edilmiştir"
+ÖRNEK: sayilar dizisi içerisinde 45 sayısı 3 kere yazılmış. "45 sayısı 3 tekrar edilmiştir
+" stringini `tekraredensayilar` dizisine aktaracağız.
+💡 İPUCU: Tekrar edilen sayıları ve kaç kere tekrar edildiğini kaydetmek için bir 
+nesne tanımlamalısınız, bu görevi yapabilmek için en az 2 kere döngü yazmalısınız. 
+Birinci döngüde hangi sayının kaç kere tekrar edildiğini tespit edip, 2. döngüde stringi oluşturup verilen diziye aktarmalısınız.
+*/
 
-/* kodlar buraya */
+const tekraredensayilar = [];
 
+return (`${sayı} sayısı ${tekrarSayisi} kere tekrar edilmiştir`);
+tekraredensayilar.push
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
 function sa() {
